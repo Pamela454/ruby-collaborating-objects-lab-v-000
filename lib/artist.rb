@@ -24,11 +24,11 @@ class Artist
     self.find(name) ? self.find(name) : self.create(name)
   end
 
-  def self.create(name)     #defining a class method. 
+  def self.create(name)     #defining a class method.
     self.new(name).tap {|artist| artist.save}
   end
 
-  def self.find(name)
+  def self.find(name)      #defining a class method. 
     self.all.find {|artist| artist.name == name }
   end
 
