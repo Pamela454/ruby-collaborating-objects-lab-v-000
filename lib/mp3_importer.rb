@@ -1,12 +1,12 @@
 class MP3Importer
   attr_reader :path  #don't want path to be fully accessible outside of the class.
-                     #shorter run time? 
+                     #shorter run time?
 
   def initialize(path)
     @path = path
   end
 
-  def files
+  def files  #collect method transform each element of collection into something else and end up with an array. 
     @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
   end
 
