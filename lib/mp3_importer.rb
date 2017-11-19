@@ -8,7 +8,7 @@ class MP3Importer
 
   def files  #collect method transform each element of collection into something else and end up with an array.
     @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
-  end  #gsub can replace string matches with other srings 
+  end  #gsub replacing matched portion of string with the result of the block. 
 
   def import
     files.each{|f|
