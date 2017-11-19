@@ -13,14 +13,14 @@ class Artist
   end
 
   def add_song(songs)
-    @songs << songs
+    @songs << songs    #stores songs for a particular artist. 
   end
 
   def save
     @@all << self
   end
 
-  def self.find_or_create_by_name(name)    #defining a class method. Can access all instances stored. 
+  def self.find_or_create_by_name(name)    #defining a class method. Can access all instances stored.
     self.find(name) ? self.find(name) : self.create(name)
   end
 
