@@ -1,5 +1,6 @@
 class MP3Importer
-  attr_reader :path  #why is this reader?
+  attr_reader :path  #don't want path to be fully accessible outside of the class.
+                     #shorter run time? 
 
   def initialize(path)
     @path = path
