@@ -1,7 +1,7 @@
 class Artist
   attr_accessor :name, :songs
 
-  @@all = []    #class variable that keeps track of each new artist generated. 
+  @@all = []    #class variable that keeps track of each new artist generated.
 
   def self.all
     @@all
@@ -9,7 +9,7 @@ class Artist
 
   def initialize(name)
     @name = name
-    @songs = []
+    @songs = []        #instance variable that keeps track of new songs generated. 
   end
 
   def add_song(songs)
