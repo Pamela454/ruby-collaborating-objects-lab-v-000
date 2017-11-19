@@ -9,7 +9,7 @@ class Artist
 
   def initialize(name)
     @name = name
-    @songs = []        #instance variable that keeps track of new songs generated. 
+    @songs = []        #instance variable that keeps track of new songs generated.
   end
 
   def add_song(songs)
@@ -20,11 +20,11 @@ class Artist
     @@all << self
   end
 
-  def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)    #defining a class method.
     self.find(name) ? self.find(name) : self.create(name)
   end
 
-  def self.create(name)
+  def self.create(name)     #defining a class method. 
     self.new(name).tap {|artist| artist.save}
   end
 
